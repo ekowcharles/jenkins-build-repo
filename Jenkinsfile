@@ -4,17 +4,17 @@ pipeline {
   stages {
     stage('check') {
       steps {
-        gradle('check')
+        gradle(tasks: 'check')
       }
     }
     stage('test') {
       steps {
-        gradle('test')
+        gradle(tasks: 'test')
       }
     }
     stage('build') {
       steps {
-        gradle('build')
+        gradle(tasks: 'build')
       }
     }
   }
